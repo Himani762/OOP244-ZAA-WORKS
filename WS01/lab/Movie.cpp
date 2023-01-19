@@ -1,3 +1,18 @@
+/***********************************************************************
+// Workshop 1 p1: tester program
+//
+// File  Movie.cpp
+// Version 1.0
+// Date JAN 19 winter 2023
+// Author Duc Minh Pham
+// ID: 103055224
+// Email: dpham34@myseneca.ca
+// Revision History
+// -----------------------------------------------------------
+// Name Duc Minh Pham    Date Jan 19 2023   Reason update files
+/////////////////////////////////////////////////////////////////
+***********************************************************************/
+
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <cstring>
