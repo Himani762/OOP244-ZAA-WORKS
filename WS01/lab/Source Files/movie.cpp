@@ -2,8 +2,8 @@
 #include <iostream>
 #include <cstring>
 #include <cstdio>
-#include "movie.h"
-#include "file.h"
+#include "/Users/phamducminh/Documents/OOP244-ZAA/OOP244-ZAA-WORKS/WS01/lab/Header Files/movie.h"
+#include "/Users/phamducminh/Documents/OOP244-ZAA/OOP244-ZAA-WORKS/WS01/lab/Header Files/file.h"
 using namespace std;
 using namespace sdds;
 namespace sdds
