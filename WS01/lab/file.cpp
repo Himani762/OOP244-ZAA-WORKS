@@ -2,7 +2,7 @@
 #include <iostream>
 #include <cstring>
 #include <cstdio>
-#include "file.h"
+#include "File.h"
 using namespace std;
 using namespace sdds;
 namespace sdds

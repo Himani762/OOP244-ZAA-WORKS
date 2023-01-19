@@ -2,8 +2,8 @@
 #include <iostream>
 #include <cstring>
 #include <cstdio>
-#include "movie.h"
-#include "file.h"
+#include "Movie.h"
+#include "File.h"
 using namespace std;
 using namespace sdds;
 namespace sdds
