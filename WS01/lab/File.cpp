@@ -4,10 +4,9 @@
 #include <cstdio>
 #include "File.h"
 using namespace std;
-using namespace sdds;
 namespace sdds
 {
-   FILE *fptr;
+   FILE* fptr;
    // opens the data file and returns true is successful
    bool openFile(const char filename[])
    {
