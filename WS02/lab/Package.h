@@ -1,7 +1,6 @@
 
-#ifndef SDDS_PACAGE_H_
+#ifndef SDDS_PACKAGE_H_
 #define SDDS_PACKAGE_H_
-
 #define filename_r "Filtered_Dataset.csv"
 
 namespace sdds {
@@ -24,13 +23,13 @@ namespace sdds {
 
    
     // ADD [1]: Declare a prototype for the display function, this function displays a customer record on the screen.
-
+    void display();
 
    // ADD [2]: Declare a prototype for the deallocateMemory function that do the following:
                          // (1). deallocates all the Package names in the customer (users) elements,
                          // (2). deallocates the users array 
 
-   
+   void  deallocateMemory();
 
 }
 #endif  
