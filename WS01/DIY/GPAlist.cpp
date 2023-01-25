@@ -47,15 +47,14 @@ namespace sdds
     }
     void sortData(struct GPA *studentGpa, int maxNum)
     {
-        int i, j;
         struct GPA gpaStudent;
-        for (i = 0; i < maxNum - 1; i++)
+        for (int i = 0; i < maxNum - 1; i++)
         {
             if (studentGpa[i].stno != 0)
             {
-                for (j = 0; j < (maxNum - 1 - i); j++)
+                for (int j = 0; j < (maxNum - 1 - i); j++)
                 {
-                    if (studentGpa[j].stno < studentGpa[j + 1].stno)
+                    if (studentGpa[j].stno > studentGpa[j + 1].stno)
                     {
                         gpaStudent = studentGpa[j];
                         studentGpa[j] = studentGpa[j + 1];

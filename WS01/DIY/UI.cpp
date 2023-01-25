@@ -50,6 +50,7 @@ namespace sdds
                 if (command == '<')
                 {
                     cin >> gpaNum;
+                    sortData(gpaStudent, maxCount);
                     for (i = 0; i < maxCount; i++)
                     {
                         if (gpaStudent[i].gpa < gpaNum && gpaStudent[i].stno != 0)
@@ -62,6 +63,7 @@ namespace sdds
                 else if (command == '>')
                 {
                     cin >> gpaNum;
+                    sortData(gpaStudent, maxCount);
                     for (i = 0; i < maxCount; i++)
                     {
                         if (gpaStudent[i].gpa > gpaNum)
@@ -74,6 +76,7 @@ namespace sdds
                 else if (command == '~')
                 {
                     cin >> gpaNum;
+                    sortData(gpaStudent, maxCount);
                     for (i = 0; i < maxCount; i++)
                     {
                         if (gpaStudent[i].gpa <= (gpaNum + 0.05) && gpaStudent[i].gpa >= (gpaNum - 0.05))
@@ -88,7 +91,8 @@ namespace sdds
                     cin >> gpaNum;
                     cout << "Syntax error: ? [Op][value]<ENTER>" << endl;
                     cout << "Op: [>,<,~,!]" << endl;
-                    cout << "value: GPA value" << endl << endl;
+                    cout << "value: GPA value" << endl
+                         << endl;
                 }
             }
         } while (keepDoing);
