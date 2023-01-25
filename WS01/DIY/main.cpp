@@ -4,13 +4,13 @@
 //
 // File  main.cpp
 // Version 1.0
-// Date  winter 2023
-// Author Fardad Soleimanloo
-//
-//
+// Date Jan 24 winter 2023
+// Author: Duc Minh Pham
+// ID: 103055224
+// Email: dpham34@myseneca.ca
 // Revision History
 // -----------------------------------------------------------
-// Name            Date            Reason
+// Name Duc Minh Pham   Date Jan 24 winter 2023    Reason
 /////////////////////////////////////////////////////////////////
 ***********************************************************************/
 #include <iostream>
