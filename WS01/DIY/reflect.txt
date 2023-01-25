@@ -1,0 +1,18 @@
+
+/***********************************************************************
+// Workshop 1 p2: tester program
+//
+// File  reflect.txt
+// Version 1.0
+// Date Jan 24 winter 2023
+// Author: Duc Minh Pham
+// ID: 103055224
+// Email: dpham34@myseneca.ca
+// Revision History
+// -----------------------------------------------------------
+// Name Duc Minh Pham   Date Jan 24 winter 2023    Reason
+/////////////////////////////////////////////////////////////////
+***********************************************************************/
+
+
+	Throughout workshop 1, I believe I have learned many new things including new concepts and a review of the knowledge I have studied before. To evaluate myself, I will rate myself 2 out of 10. The reason why I rate myself low is because of the lack of knowledge in my studying progress. The first part of workshop 1 is about separating the code into functions so we don’t need to repeat the code many times, and the only thing is to call this function and send data for it. This is a modularity concept in programming. Modular programming is about separating the building blocks or independent things into program function and executing it functionally. For me, this concept is not hard to understand, but the tricky part is how we separate them into small functions and call it from other places. We need to consider which code should be put into a function. We better put repeated code into a function and call it whenever we need. Besides that, there were a lot of difficulties and challenges for this workshop for me. I am not good at programming and thinking logically, so it took me a lot of time to find a bug and debug it. My code was not in a good shape, but I tried my best to do it. The openFile could be easy, but it took me several times to make it work properly, and also the syntaxes in C++ are quite new to me. I did workshop 1 and googled the syntax at the same time. Overall, I tried my best to do this workshop, if I had more time in the future, I would have done it one more time to improve the code and make it in good form.
