@@ -1,3 +1,4 @@
+
 /***********************************************************************
 // Workshop 1 p2: tester program
 //
@@ -14,25 +15,21 @@
 ***********************************************************************/
 #include <iostream>
 #include "GPAlist.h"
-#include <fstream>
-using namespace std;
-namespace sdds
+using namespace sdds;
+int main()
 {
-	int main()
+	if (gpaQuery("std.csv"))
 	{
-		if (gpaQuery("std.csv"))
-		{
-			std::cout << "This should have failed!" << std::endl;
-		}
-		else
-		{
-			std::cout << "failed!, this is the correct exectution" << std::endl;
-		}
-		if (!gpaQuery("students.csv"))
-		{
-			std::cout << "This should have worked, fix the problem!" << std::endl;
-		}
-		std::cout << "Goodbye!" << std::endl;
-		return 0;
+		std::cout << "This should have failed!" << std::endl;
 	}
+	else
+	{
+		std::cout << "failed!, this is the correct exectution" << std::endl;
+	}
+	if (!gpaQuery("students.csv"))
+	{
+		std::cout << "This should have worked, fix the problem!" << std::endl;
+	}
+	std::cout << "Goodbye!" << std::endl;
+	return 0;
 }

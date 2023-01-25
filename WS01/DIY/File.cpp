@@ -1,5 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
+#include <cstring>
+#include <cstdio>
 #include <fstream>
 #include "File.h"
 using namespace std;
@@ -25,7 +27,7 @@ namespace sdds
     }
     bool readStudentNumber (int *studentNumber)
     {
-        return fscanf(fptr, "%d", studentNumber) == 1;
+        return fscanf(fptr, "%d,", studentNumber) == 1;
     }
     bool readGpa (double *gpa)
     {

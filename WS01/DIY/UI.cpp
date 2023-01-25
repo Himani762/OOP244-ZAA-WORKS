@@ -12,72 +12,71 @@ namespace sdds
         char command;
         double gpaNum;
         char exitCommand;
-        int isError = 0, i, maxCount, count;
+        int i, maxCount, count;
+        bool keepDoing;
         cout << "Enter GPA query..." << endl;
         do
         {
+            keepDoing = true;
             count = 1;
             maxCount = 100;
             cout << "? ";
             cin >> command;
-            if (command != '>' && command != '<' &&
-                command != '~')
+            if (command == '!')
             {
-                cout << "Syntax error: ? [Op][value]<ENTER>"
-                        "Op: [>,<,~,!]"
-                        "value: GPA value"
-                     << endl;
-                isError = 1;
-            }
-            else if (command == '<')
-            {
-                cin >> gpaNum;
-                for (i = 0; i < maxCount; i++)
+                cout << "Exit the program? (Y)es/(N)o: ";
+                cin >> exitCommand;
+                if (exitCommand == 'y' || exitCommand == 'Y')
                 {
-                    if (gpaStudent[i].gpa < gpaNum)
-                    {
-                        printf("[%d] %d: %.1lf (%s)\n", count++, gpaStudent[i].stno,
-                               gpaStudent[i].gpa, gpaStudent[i].name);
-                    }
-                }
-            }
-            else if (command == '>')
-            {
-                cin >> gpaNum;
-                for (i = 0; i < maxCount; i++)
-                {
-                    if (gpaStudent[i].gpa > gpaNum)
-                    {
-                        printf("[%d] %d: %.1lf (%s)\n", count++,
-                               gpaStudent[i].stno, gpaStudent[i].gpa, gpaStudent[i].name);
-                    }
-                }
-            }
-            else if (command == '~')
-            {
-                cin >> gpaNum;
-                for (i = 0; i < maxCount; i++)
-                {
-                    if (gpaStudent[i].gpa <= (gpaNum + 0.05) && gpaStudent[i].gpa >= (gpaNum - 0.05))
-                    {
-                        printf("[%d] %d: %.1lf (%s)\n", count++, gpaStudent[i].stno,
-                               gpaStudent[i].gpa, gpaStudent[i].name);
-                    }
+                    keepDoing = false;
                 }
             }
             else
             {
-                if (command == '!')
+                if (command == '<')
                 {
-                    cout << "Exit the program? (Y)es/(N)o: ";
-                    cin >> exitCommand;
-                    if (exitCommand == 'y' || exitCommand == 'Y')
+                    cin >> gpaNum;
+                    for (i = 0; i < maxCount; i++)
                     {
-                        cout << "Goodbye!";
-                        isError = 0;
+                        if (gpaStudent[i].gpa < gpaNum && gpaStudent[i].stno != 0)
+                        {
+                            printf("[%d] %d: %.1lf (%s)\n", count++, gpaStudent[i].stno,
+                                   gpaStudent[i].gpa, gpaStudent[i].name);
+                        }
                     }
                 }
+                else if (command == '>')
+                {
+                    cin >> gpaNum;
+                    for (i = 0; i < maxCount; i++)
+                    {
+                        if (gpaStudent[i].gpa > gpaNum)
+                        {
+                            printf("[%d] %d: %.1lf (%s)\n", count++,
+                                   gpaStudent[i].stno, gpaStudent[i].gpa, gpaStudent[i].name);
+                        }
+                    }
+                }
+                else if (command == '~')
+                {
+                    cin >> gpaNum;
+                    for (i = 0; i < maxCount; i++)
+                    {
+                        if (gpaStudent[i].gpa <= (gpaNum + 0.05) && gpaStudent[i].gpa >= (gpaNum - 0.05))
+                        {
+                            printf("[%d] %d: %.1lf (%s)\n", count++, gpaStudent[i].stno,
+                                   gpaStudent[i].gpa, gpaStudent[i].name);
+                        }
+                    }
+                }
+                else
+                {
+                    cin >> gpaNum;
+                    cout << "Syntax error: ? [Op][value]<ENTER>" << endl;
+                    cout << "Op: [>,<,~,!]" << endl;
+                    cout << "value: GPA value" << endl << endl;
+                }
             }
-        } while (isError);
+        } while (keepDoing);
     }
 }

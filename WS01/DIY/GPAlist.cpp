@@ -23,11 +23,13 @@ namespace sdds
                      readStudentNumber(&gpaOfStudent.stno) &&
                      readGpa(&gpaOfStudent.gpa);
                 if (ok)
+                {
                     studentInfo[mnum++] = gpaOfStudent;
+                }
             }
             closeFile();
         }
-        return mnum == 100;
+        return mnum > 0;
     }
     void sortData(struct GPA *studentGpa, int maxNum)
     {
